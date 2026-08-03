@@ -42,7 +42,7 @@ run "validate_subnets" {
   }
 
   assert {
-    condition = aws_subnet.terraform_subnets[0].availability_zone != aws_subnet.terraform_subnets[1].availability_zone
+    condition     = aws_subnet.terraform_subnets[0].availability_zone != aws_subnet.terraform_subnets[1].availability_zone
     error_message = "Subnets are not in different availability zones"
   }
 }

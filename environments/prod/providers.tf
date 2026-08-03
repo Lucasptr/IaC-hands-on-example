@@ -7,11 +7,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "hands-on-s3-bucket-lpd"
-    key     = "states/terraform.tfstate"
-    profile = "default"
+    bucket       = "hands-on-s3-bucket-lpd"
+    key          = "states/terraform.tfstate"
+    profile      = "default"
     use_lockfile = true
-    region = "us-east-1"
+    region       = "us-east-1"
     #dynamodb_table = "tf-state-locking"
   }
 }

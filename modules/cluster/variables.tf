@@ -1,4 +1,4 @@
-variable "subnet_ids"    {
+variable "subnet_ids" {
   description = "The IDs of the subnets where the instance will be launched."
   type        = list(string)
 }

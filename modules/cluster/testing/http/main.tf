@@ -12,10 +12,10 @@ data "aws_lb" "terraform_lb_test" {
 }
 
 data "http" "terraform_lb_test" {
-  url = "http://${data.aws_lb.terraform_lb_test.dns_name}"
+  url                = "http://${data.aws_lb.terraform_lb_test.dns_name}"
   request_timeout_ms = 5000
   retry {
-    attempts = 5
+    attempts     = 5
     min_delay_ms = 1000
     max_delay_ms = 10000
   }
