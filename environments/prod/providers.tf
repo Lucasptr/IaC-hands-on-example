@@ -9,7 +9,6 @@ terraform {
   backend "s3" {
     bucket       = "hands-on-s3-bucket-lpd"
     key          = "states/terraform.tfstate"
-    profile      = "default"
     use_lockfile = true
     region       = "us-east-1"
     #dynamodb_table = "tf-state-locking"
@@ -17,6 +16,5 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
-  profile = "default"
+  region = "us-west-2"
 }
